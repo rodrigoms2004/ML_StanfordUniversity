@@ -19,12 +19,9 @@ for iter = 1:num_iters
 
 
 
-
-
-
-
-
-
+    predictions = X*theta;              % predictions of hypothesis on all m examples
+    delta = (predictions - y)' * X;     %  delta [h(theta)(xi) - yi]*X
+    theta = theta - (alpha/m * delta)'; % new value od theta
 
 
     % ============================================================
