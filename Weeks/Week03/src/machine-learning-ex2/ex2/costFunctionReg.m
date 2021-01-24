@@ -18,8 +18,19 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
 
+% hypotesis using sigmoid function
+hyp = sigmoid(X * theta);
+logisticSimpleCost = ( y' * log(hyp) + (1 - y)' * log(1 - hyp) );
 
+% penality, but not with the first theta value (theta0, in Octave is theta1)
+theta(1) = 0;
 
+penality = (lambda / (2 * m)) * (theta'*theta);
+J = -1/(m) * logisticSimpleCost + penality;
+
+% Gradient
+% grad = ((hyp - y)' * X) / m;
+grad = (X' * (hyp - y) + lambda * theta) / m;
 
 
 % =============================================================

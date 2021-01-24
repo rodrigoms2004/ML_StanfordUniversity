@@ -16,6 +16,11 @@ p = zeros(m, 1);
 %
 
 
+threshold = 0.5;
+predictions = sigmoid(X * theta);
+
+p = predictions >= threshold;
+
 
 
 
