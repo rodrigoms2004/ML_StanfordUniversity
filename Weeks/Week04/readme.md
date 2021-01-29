@@ -3,7 +3,7 @@
 
 ## Motivations
 
-![Quadratic Term Question](Weeks/Week04/questions/01_QuadraticTerms.png)
+![Quadratic Term Question](https://github.com/rodrigoms2004/ML_StanfordUniversity/blob/main/Weeks/Week04/questions/01_QuadraticTerms.png)
 
 ```
 n = 100 * 100 = 10000
